@@ -15,15 +15,20 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    
+
     /// navigate to [HomeScreen]
     Future.delayed(const Duration(milliseconds: 750), () {
-      locator<NavigationService>().pushReplacementScreen(HomeScreen.routeName);
+      locator<NavigationService>().pushReplacementScreen(HomeScreen.routeName,
+          arguments: {"animate": true});
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Text("Splash Screen"),
+      ),
+    );
   }
 }
