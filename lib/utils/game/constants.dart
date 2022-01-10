@@ -20,4 +20,7 @@ class GameConstants {
     [0, 4, 8],
     [2, 4, 6],
   ];
+
+  // No of played games to store
+  static const int noOfGamestoStore = 10;
 }

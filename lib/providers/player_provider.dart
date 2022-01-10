@@ -9,14 +9,13 @@ class PlayerProvider extends BaseProvider {
       locator<SharedPreferenceManager>();
 
   /// Stores if Human is playing as X
-  bool isHumanX =false;
+  bool isHumanX = false;
 
   PlayerProvider() {
     loadSymbol();
   }
 
   void loadSymbol() async {
-    
     bool? val = await _sharedPreferenceManager
         .getBoolValueOrNull(SharedPreferenceKeys.playerSymbol);
     if (val == null) {
@@ -31,6 +30,7 @@ class PlayerProvider extends BaseProvider {
   /// Updates the player symbol
   void updateSymbol(bool val) async {
     setState(ProviderState.busy);
+    isHumanX = val;
     await _sharedPreferenceManager.setBoolValue(
         SharedPreferenceKeys.playerSymbol, val);
 

@@ -12,15 +12,14 @@ class TicTacToe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Tic Tac Toe',
-        theme: AppTheme.globalTheme,
-        initialRoute:
-         HomeScreen.routeName 
-        // :
-        //  SplashScreen.routeName
-        ,
-        onGenerateRoute: RouteGenerator.generateRoute,
-        navigatorKey: locator<NavigationService>().navigatorKey,
-      );
+      title: 'Tic Tac Toe',
+      theme: AppTheme.globalTheme,
+      initialRoute: HomeScreen.routeName
+      // :
+      //  SplashScreen.routeName
+      ,
+      onGenerateRoute: RouteGenerator.generateRoute,
+      navigatorKey: locator<NavigationService>().navigatorKey,
+    );
   }
 }

@@ -43,20 +43,28 @@ class SharedPreferenceManager {
     await _prefs!.setBool(key, value);
   }
 
-  //getting any saved string with its key
+  //getting any saved double with its key
   Future<double?> getDoubleValue(String key) async {
     _prefs ??= await SharedPreferences.getInstance();
-    if (_prefs!.getString(key) == null) {
-      return null;
-    } else {
-      return double.tryParse(_prefs!.getString(key)!);
-    }
+    return _prefs!.getDouble(key);
+  }
+
+  //saving any double with key and its value
+  Future<void> setDoubleValue(String key, double value) async {
+    _prefs ??= await SharedPreferences.getInstance();
+    await _prefs!.setDouble(key, value);
+  }
+
+  //getting any saved string with its key
+  Future<int?> getIntValue(String key) async {
+    _prefs ??= await SharedPreferences.getInstance();
+    return _prefs!.getInt(key);
   }
 
   //saving any string with key and its value
-  Future<void> setDoubleValue(String key, double value) async {
+  Future<void> setIntValue(String key, int value) async {
     _prefs ??= await SharedPreferences.getInstance();
-    await _prefs!.setString(key, value.toString());
+    await _prefs!.setInt(key, value);
   }
 
   //getting any saved string with its key

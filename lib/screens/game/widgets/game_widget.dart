@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tictactoe/providers/game_provider.dart';
-import 'package:tictactoe/screens/game/widgets/individual_grid_tile.dart';
+import 'package:tictactoe/widgets/game/individual_grid_tile.dart';
 
 class GameWidget extends StatelessWidget {
   const GameWidget({Key? key}) : super(key: key);
@@ -18,6 +18,7 @@ class GameWidget extends StatelessWidget {
               return IndividualGridTile(
                 value: provider.board[index],
                 index: index,
+                viewOnly: false,
               );
             });
       },

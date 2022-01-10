@@ -25,11 +25,11 @@ class NavigationService {
         arguments: arguments);
   }
 
-  void pushDialog(Widget dialog) {
+  void pushDialog(Widget dialog, {bool dismissable = false}) {
     showDialog(
         context: navigatorKey.currentContext!,
         barrierColor: Colors.transparent,
-        barrierDismissible: false,
+        barrierDismissible: dismissable,
         builder: (BuildContext context) {
           return dialog;
         });

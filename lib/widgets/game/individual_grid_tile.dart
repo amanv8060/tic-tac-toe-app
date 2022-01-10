@@ -11,7 +11,12 @@ import 'package:tictactoe/utils/ui/size_config.dart';
 class IndividualGridTile extends StatelessWidget {
   final int value;
   final int index;
-  const IndividualGridTile({Key? key, required this.value, required this.index})
+  final bool viewOnly;
+  const IndividualGridTile(
+      {Key? key,
+      required this.value,
+      required this.index,
+      required this.viewOnly})
       : super(key: key);
 
   @override
@@ -19,19 +24,20 @@ class IndividualGridTile extends StatelessWidget {
     return Consumer<PlayerProvider>(
       builder: (context, provider, _) {
         return GestureDetector(
-            onTap: () async {
-              Provider.of<GameProvider>(context, listen: false).play(index);
-            },
-            child: AnimatedContainer(
-              margin: EdgeInsets.symmetric(
-                  vertical: SizeConfig.fitToHeight(10),
-                  horizontal: SizeConfig.fitToWidth(10)),
-              decoration: BoxDecoration(
-                  color: AppTheme.white.withOpacity(0.75),
-                  borderRadius:
-                      BorderRadius.circular(SizeConfig.fitToWidth(16))),
-              child: Center(
-                  child: Text(
+          onTap: viewOnly
+              ? null
+              : () async {
+                  Provider.of<GameProvider>(context, listen: false).play(index);
+                },
+          child: Container(
+            margin: EdgeInsets.symmetric(
+                vertical: SizeConfig.fitToHeight(10),
+                horizontal: SizeConfig.fitToWidth(10)),
+            decoration: BoxDecoration(
+                color: AppTheme.white.withOpacity(0.75),
+                borderRadius: BorderRadius.circular(SizeConfig.fitToWidth(16))),
+            child: Center(
+              child: Text(
                 valToSymbol(value, provider.isHumanX),
                 style: CustomFontStyle.getTextStyle(
                     fontSize: 32,
@@ -39,12 +45,10 @@ class IndividualGridTile extends StatelessWidget {
                     color: value == GameConstants.AI_PLAYER
                         ? AppTheme.red
                         : AppTheme.blue),
-              )),
-              // Define how long the animation should take.
-              duration: const Duration(seconds: 1),
-              // Provide an optional curve to make the animation feel smoother.
-              curve: Curves.fastOutSlowIn,
-            ));
+              ),
+            ),
+          ),
+        );
       },
     );
   }
