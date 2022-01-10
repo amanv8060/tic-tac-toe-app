@@ -4,7 +4,6 @@ import 'package:tictactoe/models/game.dart';
 import 'package:tictactoe/providers/player_provider.dart';
 import 'package:tictactoe/screens/history/functions/get_dialog_header.dart';
 import 'package:tictactoe/screens/history/widgets/game_preview_widget.dart';
-import 'package:tictactoe/utils/get_it/locator.dart';
 import 'package:tictactoe/utils/theme/app_theme.dart';
 import 'package:tictactoe/utils/theme/font_style.dart';
 import 'package:tictactoe/utils/ui/size_config.dart';

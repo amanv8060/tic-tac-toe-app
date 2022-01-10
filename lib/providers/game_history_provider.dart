@@ -3,7 +3,6 @@ import 'package:tictactoe/models/game.dart';
 import 'package:tictactoe/providers/base_provider.dart';
 import 'package:tictactoe/services/game_history_service.dart';
 import 'package:tictactoe/utils/get_it/locator.dart';
-import 'package:tictactoe/utils/storage/shared_preferences_manager.dart';
 
 class GameHistoryProvider extends BaseProvider {
   final GameHistoryService _gameHistoryService = locator<GameHistoryService>();
