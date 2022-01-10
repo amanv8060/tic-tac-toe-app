@@ -44,7 +44,7 @@ class IndividualGridTile extends StatelessWidget {
                     bold: true,
                     color: value == GameConstants.AI_PLAYER
                         ? AppTheme.red
-                        : AppTheme.blue),
+                        : AppTheme.pinkishpurple),
               ),
             ),
           ),

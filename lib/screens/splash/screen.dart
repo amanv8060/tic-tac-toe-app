@@ -39,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: AvatarGlow(
               endRadius: SizeConfig.fitToWidth(150),
               duration: const Duration(milliseconds: 1000),
-              glowColor: Colors.white,
+              glowColor: AppTheme.white,
               repeat: true,
               repeatPauseDuration: const Duration(milliseconds: 500),
               startDelay: const Duration(milliseconds: 10),
@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     padding: EdgeInsets.all(SizeConfig.fitToWidth(16)),
                     child: Image.asset(
                       'assets/images/logo.png',
-                      color: Colors.white,
+                      color: AppTheme.white,
                       fit: BoxFit.contain,
                     ),
                   ),

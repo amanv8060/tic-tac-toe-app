@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:tictactoe/providers/game_history_provider.dart';
 import 'package:tictactoe/screens/history/widgets/history_header.dart';
 import 'package:tictactoe/screens/history/widgets/history_view.dart';
+import 'package:tictactoe/utils/theme/app_theme.dart';
 
 class HistoryScreen extends StatefulWidget {
   static const String routeName = "HistoryScreen";
@@ -33,11 +34,13 @@ class _HistoryScreenState extends State<HistoryScreen> {
         body: Column(
           children: const [HistoryHeader(), Expanded(child: HistoryView())],
         ),
-        floatingActionButton: FloatingActionButton(
+        floatingActionButton: FloatingActionButton.extended(
+          backgroundColor: AppTheme.pinkishpurple,
           onPressed: () {
             Provider.of<GameHistoryProvider>(context, listen: false)
                 .clearData();
           },
+          label: const Text("Clear History"),
         ),
       ),
     );

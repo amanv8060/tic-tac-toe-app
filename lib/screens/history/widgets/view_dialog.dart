@@ -24,7 +24,7 @@ class ViewDialog extends StatelessWidget {
       content: SizedBox(
         width: SizeConfig.screenWidth * 0.75,
         child: ChangeNotifierProvider(
-          create: (context) => locator<PlayerProvider>(),
+          create: (context) => PlayerProvider(),
           child: GamePreviewWidget(board: game.board),
         ),
       ),
