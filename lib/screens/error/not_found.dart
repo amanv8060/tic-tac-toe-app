@@ -38,7 +38,7 @@ class NotFoundScreen extends StatelessWidget {
                       ),
                     ),
                     onPressed: () => locator<NavigationService>()
-                        .pushReplacementScreen(HomeScreen.routeName)),
+                        .removeAllAndPush(HomeScreen.routeName, "false")),
               )
             ],
           )),

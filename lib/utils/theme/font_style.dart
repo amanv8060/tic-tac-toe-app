@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tictactoe/utils/theme/app_theme.dart';
 
 class CustomFontStyle {
   static TextStyle getTextStyle({
@@ -20,7 +21,7 @@ class CustomFontStyle {
                     ? FontWeight.w300
                     : FontWeight.normal;
     return TextStyle(
-      color: color ?? Colors.white,
+      color: color ?? AppTheme.white,
       fontWeight: fontWeight,
       fontSize: fontSize,
     );

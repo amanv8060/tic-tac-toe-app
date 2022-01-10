@@ -1,7 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:tictactoe/screens/home/screen.dart';
-import 'package:tictactoe/screens/splash/screen.dart';
 import 'package:tictactoe/services/navigation_service.dart';
 import 'package:tictactoe/utils/get_it/locator.dart';
 import 'package:tictactoe/utils/navigation/routes.dart';
@@ -17,9 +15,12 @@ class TicTacToe extends StatelessWidget {
         title: 'Tic Tac Toe',
         theme: AppTheme.globalTheme,
         initialRoute:
-            kDebugMode ? HomeScreen.routeName : SplashScreen.routeName,
+         HomeScreen.routeName 
+        // :
+        //  SplashScreen.routeName
+        ,
         onGenerateRoute: RouteGenerator.generateRoute,
         navigatorKey: locator<NavigationService>().navigatorKey,
-        home: const SplashScreen());
+      );
   }
 }

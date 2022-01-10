@@ -1,6 +1,6 @@
 import 'package:tictactoe/enums/provider_enums.dart';
 import 'package:tictactoe/providers/base_provider.dart';
-import 'package:tictactoe/screens/game/widgets/win_dialog.dart';
+import 'package:tictactoe/screens/game/widgets/game_end_dialog.dart';
 import 'package:tictactoe/services/game_service.dart';
 import 'package:tictactoe/services/navigation_service.dart';
 import 'package:tictactoe/utils/game/board.dart';
@@ -40,7 +40,10 @@ class GameProvider extends BaseProvider {
   void checkforWins() {
     int val = _boardUtils.evaluateBoard(board);
     if (val != GameConstants.NO_WINNERS_YET) {
-      locator<NavigationService>().pushDialog(GameEndDialog(result: val));
+      locator<NavigationService>().pushDialog(GameEndDialog(
+        result: val,
+      ));
+      resetGame();
     }
   }
 }

@@ -17,11 +17,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
 
-    //initializing size config for the entire app 
+    //initializing size config for the entire app
     SizeConfig().init(context);
     return Scaffold(
         appBar: HomeScreenAppBar(text: "Lets Play "),
         body: ChangeNotifierProvider(
-            create: (context) => PlayerProvider(), child: GameScreen()));
+            create: (context) => PlayerProvider(), child: const GameScreen()));
   }
 }
