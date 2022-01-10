@@ -31,6 +31,7 @@ class HistoryView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Card(
             child: ListTile(
+                key: GlobalKey(debugLabel: "historyListTile"),
                 onTap: () {
                   locator<NavigationService>().pushDialog(
                       ViewDialog(

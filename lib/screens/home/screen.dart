@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:tictactoe/providers/player_provider.dart';
 import 'package:tictactoe/screens/game/screen.dart';
 import 'package:tictactoe/screens/home/widgets/app_bar.dart';
-import 'package:tictactoe/utils/get_it/locator.dart';
 import 'package:tictactoe/utils/ui/size_config.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -22,7 +21,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
         appBar: HomeScreenAppBar(text: "Lets Play "),
         body: ChangeNotifierProvider(
-            create: (context) => locator<PlayerProvider>(),
-            child: const GameScreen()));
+            create: (context) => PlayerProvider(), child: const GameScreen()));
   }
 }
