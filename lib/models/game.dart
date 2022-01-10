@@ -2,7 +2,7 @@ class Game {
   /// Time when this game was played
   late DateTime timeStamp;
 
-  /// Game board at that movement , 
+  /// Game board at that movement ,
   List<int> board;
 
   Game({timeStamp, required this.board}) {

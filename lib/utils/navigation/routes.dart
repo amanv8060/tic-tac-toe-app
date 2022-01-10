@@ -12,7 +12,7 @@ class RouteGenerator {
         : settings.arguments as Map<String, dynamic>;
     switch (settings.name) {
       case HomeScreen.routeName:
-        bool animate = args["animate"]  ?? false;
+        bool animate = args["animate"] ?? false;
         if (animate) {
           return FadeInRoute(page: const HomeScreen(), settings: settings);
         }

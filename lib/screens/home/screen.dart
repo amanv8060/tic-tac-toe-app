@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:tictactoe/providers/player_provider.dart';
+import 'package:tictactoe/screens/game/screen.dart';
+import 'package:tictactoe/screens/home/widgets/app_bar.dart';
+import 'package:tictactoe/utils/ui/size_config.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "HomeScreen";
@@ -11,10 +16,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+
+    //initializing size config for the entire app 
+    SizeConfig().init(context);
     return Scaffold(
-      body: Center(
-        child: Text("Home Screen"),
-      ),
-    );
+        appBar: HomeScreenAppBar(text: "Lets Play "),
+        body: ChangeNotifierProvider(
+            create: (context) => PlayerProvider(), child: GameScreen()));
   }
 }

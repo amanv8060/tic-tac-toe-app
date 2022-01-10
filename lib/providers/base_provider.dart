@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tictactoe/enums/provider_enums.dart';
 
+/// Base Provider to handle the state for provider
 class BaseProvider extends ChangeNotifier {
   ProviderState _state = ProviderState.idle;
 
