@@ -32,7 +32,3 @@ extension PumpApp on WidgetTester {
           );
   }
 }
-
-
-
-
