@@ -7,6 +7,7 @@ import 'package:tictactoe/screens/home/screen.dart';
 import 'package:tictactoe/screens/splash/screen.dart';
 import 'package:tictactoe/utils/navigation/fade_in_route.dart';
 
+/// Parses the route and returns the correct route
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final args = settings.arguments == null

@@ -22,6 +22,7 @@ class GameProvider extends BaseProvider {
     setState(ProviderState.idle);
   }
 
+  /// plays the current move on the boardu
   void play(int index) async {
     if (_boardUtils.isMoveLegal(board, index)) {
       //sanity check
@@ -38,6 +39,8 @@ class GameProvider extends BaseProvider {
     }
   }
 
+  /// checks if someone has won , if won ,  reset the game and show dialog
+  /// else skip
   void checkforWins() async {
     int val = _boardUtils.evaluateBoard(board);
     if (val != GameConstants.NO_WINNERS_YET) {

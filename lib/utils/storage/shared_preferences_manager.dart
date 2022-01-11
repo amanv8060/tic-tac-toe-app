@@ -1,5 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
+/// Wrapper class to help make the interaction with SharedPreferences easy
 class SharedPreferenceManager {
   static SharedPreferences? _prefs;
 

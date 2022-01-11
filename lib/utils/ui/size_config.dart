@@ -6,9 +6,19 @@ class SizeConfig {
   //ignore: constant_identifier_names
   static const double ASSUMED_SCREEN_WIDTH = 412.0;
   static late MediaQueryData _mediaQueryData;
+
+  /// Current width of the screen
   static late double screenWidth;
+
+  /// Current height of the screen
   static late double screenHeight;
+
+  /// width of one block in screen (Assumung the entire screen can accomodate
+  /// 100 blocks)
   static late double blockSizeHorizontal;
+
+  /// height of one block in screen (Assumung the entire screen can accomodate
+  ///  100 blocks)
   static late double blockSizeVertical;
 
   void init(BuildContext context) {

@@ -15,6 +15,11 @@ or you can buiild it
 3. run `flutter pub get`
 4. run `flutter run`
 
+## Running tests
+
+- `flutter test --test-randomize-ordering-seed random`
+- `flutter test integration_test`
+
 
 <p align="center">
 <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-v2.8.1-blue?logo=flutter"></a>

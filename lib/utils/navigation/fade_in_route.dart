@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// CustomAnimation for Route transition
 class FadeInRoute extends PageRouteBuilder {
   FadeInRoute({required page, required RouteSettings settings})
       : super(
