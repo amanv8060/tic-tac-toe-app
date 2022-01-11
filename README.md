@@ -6,7 +6,7 @@ Algorithm from : [Geeks for Geeks](https://www.geeksforgeeks.org/minimax-algorit
 
 ## Run it 
 
-- Download apk from releases 
+- Download apk from [releases](https://github.com/amanv8060/tic-tac-toe-app/releases) 
 
 or you can buiild it
 
@@ -25,7 +25,7 @@ or you can buiild it
 <a href="https://flutter.dev/"><img src="https://img.shields.io/badge/Flutter-v2.8.1-blue?logo=flutter"></a>
 <a href="https://github.com/amanv8060/tic-tac-toe-app"><img src="https://img.shields.io/github/stars/amanv8060/tic-tac-toe-app.svg?style=flat&logo=github&colorB=deeppink&label=stars"></a>
 <a href="https://github.com/amanv8060/tic-tac-toe-app"><img src="https://img.shields.io/github/v/release/amanv8060/tic-tac-toe-app.svg"></a>
-<a href="https://github.com/amanv8060/tic-tac-toe-app"><img src="https://img.shields.io/github/license/amanv8060/tic-tac-toe-app.svg" alt="License: MPL"></a>
+<a href="https://github.com/amanv8060/tic-tac-toe-app"><img src="https://img.shields.io/github/license/amanv8060/tic-tac-toe-app.svg" alt="License: MIT"></a>
 </p>
 
 ## Contributing
@@ -41,6 +41,6 @@ Every contibution , even small are welcome :
 
 ## Contributors
 
-<a href="https://github.com/amanv8060/brandie-assignment/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=amanv8060/brandie-assignment" />
+<a href="https://github.com/amanv8060/tic-tac-toe-app/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=amanv8060/tic-tac-toe-app" />
 </a>
